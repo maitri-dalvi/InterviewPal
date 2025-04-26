@@ -68,26 +68,32 @@ export async function signUp(params: SignUpParams) {
 }
 
 export async function signIn(params: SignInParams) {
-  const { email, idToken } = params;
-
-  try {
-    const userRecord = await auth.getUserByEmail(email);
-    if (!userRecord)
+    const { email, idToken } = params;
+  
+    try {
+      const userRecord = await auth.getUserByEmail(email);
+      if (!userRecord)
+        return {
+          success: false,
+          message: "User does not exist. Create an account.",
+        };
+  
+      await setSessionCookie(idToken);
+      
+      // Add this return statement
+      return {
+        success: true,
+        message: "Signed in successfully.",
+      };
+    } catch (error: any) {
+      console.log(error); // Consider using console.error instead
+      
       return {
         success: false,
-        message: "User does not exist. Create an account.",
+        message: "Failed to log into account. Please try again.",
       };
-
-    await setSessionCookie(idToken);
-  } catch (error: any) {
-    console.log("");
-
-    return {
-      success: false,
-      message: "Failed to log into account. Please try again.",
-    };
+    }
   }
-}
 
 // Sign out user by clearing the session cookie
 export async function signOut() {
