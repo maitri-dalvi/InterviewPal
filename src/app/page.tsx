@@ -150,33 +150,16 @@ export default function HeroGeometric({
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.div
-            custom={0}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
-          >
-            
-          </motion.div>
 
           <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-300 via-white/90 to-indigo-300">{title1}</span>
-              {/* <br />
-              <span
-                className={cn(
-                  "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 ",
-                  pacifico.className,
-                )}
-              >
-                {title2}
-              </span> */}
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-3 md:mb-8 tracking-tight">
+              <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-b from-white/90 to-[#dcd5ff]">{title1}</span>
+              
             </h1>
           </motion.div>
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-white/40 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
             An AI-powered voice assistant that conducts real-time mock interviews, providing instant feedback; all without any human interaction.
             </p>
           </motion.div>
@@ -188,13 +171,26 @@ export default function HeroGeometric({
   animate="visible"
   className="flex justify-center gap-4 mt-6"
 >
-  <Button asChild variant="default">
-    <a href="/sign-up">Sign Up</a>
-  </Button>
-  <Button asChild variant="outline">
-    <a href="/sign-in">Sign In</a>
-  </Button>
+  <motion.a
+    href="/sign-up"
+    className="px-6 py-2 min-w-[140px] text-center font-semibold text-sm rounded-full transition duration-300 ease-in-out bg-[#dcd5ff] text-black flex justify-center items-center"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    Sign Up
+  </motion.a>
+
+  <motion.a
+    href="/sign-in"
+    className="px-6 py-2 min-w-[140px] text-center font-semibold text-sm rounded-full transition duration-300 ease-in-out bg-[#2e2b32] text-white flex justify-center items-center"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    Sign In
+  </motion.a>
 </motion.div>
+
+
         </div>
       </div>
 
