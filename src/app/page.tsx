@@ -160,7 +160,7 @@ export default function HeroGeometric({
 
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-            An AI-powered voice assistant that conducts real-time mock interviews, providing instant feedback; all without any human interaction.
+            An AI-powered voice assistant that generates & conducts real-time mock interviews, providing instant feedback; all without any human interaction.
             </p>
           </motion.div>
 
