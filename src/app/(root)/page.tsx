@@ -8,15 +8,22 @@ import {getInterviewsByUserId, getLatestInterviews } from '@/lib/actions/general
 
 const page = async () => {
   const user = await getCurrentUser();
-  
-  //parallel data fetching
-  const [userInterviews, latestInterviews] = await Promise.all([
-    await getInterviewsByUserId(user?.id!),
-    await getLatestInterviews({userId: user?.id!})
+
+  if (!user?.id) {
+    return <p className="text-red-500">User not found or not logged in.</p>;
+  }
+
+  const [userInterviewsRaw, latestInterviewsRaw] = await Promise.all([
+    getInterviewsByUserId(user.id),
+    getLatestInterviews({ userId: user.id }),
   ]);
 
-  const hasPastInterviews = userInterviews?.length > 0;
-  const hasUpcomingInterviews = latestInterviews?.length > 0;
+  // fallback to empty arrays to avoid .length issues
+  const userInterviews = userInterviewsRaw || [];
+  const latestInterviews = latestInterviewsRaw || [];
+
+  const hasPastInterviews = userInterviews.length > 0;
+  const hasUpcomingInterviews = latestInterviews.length > 0;
   return (
     <>
     <section className='card-cta'>
