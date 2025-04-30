@@ -1,4 +1,4 @@
-**InterviewPal👾**is a full-stack AI-powered voice assistant that conducts real-time mock interviews, providing instant feedback and score — all without the need for human interaction. It's designed to help users practice and prepare for real-life interviews at their convenience, choosing the type and difficulty of interview they want!
+**InterviewPal👾** is a full-stack AI-powered voice assistant webapp that conducts real-time mock interviews, providing instant feedback and score — all without the need for human interaction. It's designed to help users practice and prepare for real-life interviews at their convenience, choosing the type and difficulty of interview they want!
 
 ## 🔎 About the Project
 
@@ -10,7 +10,7 @@ Interview Pal enables users to:
 
 No human interviewer is required — the AI voice assistant handles everything from asking questions to evaluating responses.
 
----
+
 
 ## 🚀 Tech Stack
 
@@ -24,7 +24,6 @@ This project utilizes the following technologies:
 - **Backend / Realtime Data**: Firebase & Firestore 
 - **Validation**: Zod
 
----
 
 ## 🔄 Workflow
 
@@ -36,7 +35,7 @@ This project utilizes the following technologies:
    - Data is stored and fetched in real-time using **Firebase**.
 5. Final feedback and improvement suggestions are shown to the user in a detailed report.
 
----
+
 
 ## 🛠 Features
 
