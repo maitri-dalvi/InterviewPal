@@ -1,4 +1,4 @@
-**Interview Pal👾** is a full-stack AI-powered voice assistant that conducts real-time mock interviews, providing instant feedback and score — all without the need for human interaction. It's designed to help users practice and prepare for real-life interviews at their convenience, choosing the type and difficulty of interview they want!
+**InterviewPal👾**is a full-stack AI-powered voice assistant that conducts real-time mock interviews, providing instant feedback and score — all without the need for human interaction. It's designed to help users practice and prepare for real-life interviews at their convenience, choosing the type and difficulty of interview they want!
 
 ## 🔎 About the Project
 
