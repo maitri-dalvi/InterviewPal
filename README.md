@@ -2,7 +2,7 @@
 
 ## 🔎 About the Project
 
-Interview Pal enables users to:
+InterviewPal enables users to:
 - Engage in AI-led mock interviews anytime.
 - Receive real-time grading and feedback based on their answers.
 - Customize the type of interview based on roles or topics.
