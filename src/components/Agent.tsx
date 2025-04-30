@@ -90,7 +90,7 @@ const Agent = ({userName, userId, type, interviewId, questions}: AgentProps) => 
         router.push(`/interview/${interviewId}/feedback`);
       } else {
         console.log('Error saving feedback');
-        router.push('/');
+        router.push('/homepage');
         
       }
       
@@ -99,7 +99,7 @@ const Agent = ({userName, userId, type, interviewId, questions}: AgentProps) => 
     useEffect(() => {
       if(callStatus === CallStatus.FINISHED) {
         if(type === 'generate') {
-          router.push('/')
+          router.push('/homepage')
         } else {
           handleGenerateFeedback(messages);
         }

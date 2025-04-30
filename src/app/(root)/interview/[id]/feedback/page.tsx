@@ -11,7 +11,7 @@ const page = async ({params}: RouteParams) => {
   const user = await getCurrentUser();
 
   const interview = await getInterviewsById(id);
-  if(!interview) redirect('/');
+  if(!interview) redirect('/homepage');
 
   const feedback = await getFeedbackByInterviewId({
     interviewId: id, 
@@ -91,7 +91,7 @@ const page = async ({params}: RouteParams) => {
 
         <div className="buttons">
             <Button className="btn-secondary flex-1">
-                <Link href="/" className="flex w-full justify-center">
+                <Link href="/homepage" className="flex w-full justify-center">
                     <p className="text-sm font-semibold text-primary-200 text-center">
                         Back to dashboard
                     </p>
