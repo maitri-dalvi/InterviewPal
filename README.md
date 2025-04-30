@@ -1,4 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Interview Pal👾** is a full-stack AI-powered voice assistant that conducts real-time mock interviews, providing instant feedback and score — all without the need for human interaction. It's designed to help users practice and prepare for real-life interviews at their convenience, choosing the type and difficulty of interview they want!
+
+## 🔎 About the Project
+
+Interview Pal enables users to:
+- Engage in AI-led mock interviews anytime.
+- Receive real-time grading and feedback based on their answers.
+- Customize the type of interview based on roles or topics.
+- Improve communication and response skills in a realistic interview setting.
+
+No human interviewer is required — the AI voice assistant handles everything from asking questions to evaluating responses.
+
+---
+
+## 🚀 Tech Stack
+
+This project utilizes the following technologies:
+
+- **Frontend**: Next.js, React.js, TypeScript  
+- **Voice Assistant**: Vapi API 
+- **AI & NLP**:
+  - **GPT-4**: For conducting interviews
+  - **Gemini AI & Gemini Flash**: For generating feedback and performance analysis
+- **Backend / Realtime Data**: Firebase & Firestore 
+- **Validation**: Zod
+
+---
+
+## 🔄 Workflow
+
+1. **User initiates the interview** through the web interface.
+2. The **Vapi-powered AI voice assistant** communicates with the user.
+3. Interview questions are generated and managed using **GPT-4 via API**.
+4. Once the interview concludes:
+   - Responses are analyzed using **Gemini Flash** for scoring and feedback.
+   - Data is stored and fetched in real-time using **Firebase**.
+5. Final feedback and improvement suggestions are shown to the user in a detailed report.
+
+---
+
+## 🛠 Features
+
+- Voice-based mock interview simulation
+- Dynamic question generation based on role
+- Instant scoring and performance analytics
+- Zero human dependency — fully automated
+- Realtime data updates and response evaluation
+
 
 ## Getting Started
 
@@ -6,31 +53,4 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
