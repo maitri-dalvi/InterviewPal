@@ -102,7 +102,7 @@ const AuthForm = ({ type }: { type:  FormType}) => {
           <Image src="/alien.png" alt="logo" height={33} width={39} />
           <h2 className="text-primary-100">InterviewPal</h2>
         </div>
-        <h3>Practice job interviews with AI</h3>
+        
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6 mt-4 form">
