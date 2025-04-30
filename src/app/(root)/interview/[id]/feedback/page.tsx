@@ -69,14 +69,16 @@ const page = async ({params}: RouteParams) => {
             ))}
         </div>
 
-        <div className="flex flex-col gap-3">
+        {feedback?.strengths && feedback.strengths.length > 0 && (
+            <div className="flex flex-col gap-3">
             <h3>Strengths</h3>
             <ul>
-                {feedback?.strengths?.map((strength, index) => (
-                    <li key={index}>{strength}</li>
-                ))}
+            {feedback.strengths.map((strength, index) => (
+            <li key={index}>{strength}</li>
+            ))}
             </ul>
-        </div>
+            </div>
+        )}
 
         <div className="flex flex-col gap-3">
             <h3>Areas for Improvement</h3>

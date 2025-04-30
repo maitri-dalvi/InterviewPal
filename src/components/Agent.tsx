@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { vapi } from "@/lib/vapi.sdk";
-import {interviewer} from "@/constants"
+import {interviewer} from "../constants"
 import { createFeedback } from "@/lib/actions/general.action";
 
 
@@ -126,7 +126,7 @@ const Agent = ({userName, userId, type, interviewId, questions}: AgentProps) => 
           formattedQuestions = questions.map((question) => `- ${question}`)
           .join('\n');
         }
-        await vapi.start('interviewer', {
+        await vapi.start(interviewer, {
           variableValues: {
             questions: formattedQuestions
           }
