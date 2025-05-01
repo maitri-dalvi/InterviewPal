@@ -10,12 +10,7 @@ InterviewPal enables users to:
 
 No human interviewer is required — the AI voice assistant handles everything from asking questions to evaluating responses.
 
-## 🕹️ Demo
-
-![Landing Page](public/1.png)
-![Home Page](public/2.png)
-![AI Interview](public/3.png)
-![Feedback Page](public/4.png)
+<!-- ## 🕹️ Demo -->
 
 
 ## 🚀 Tech Stack
