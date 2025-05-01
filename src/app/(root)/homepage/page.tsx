@@ -10,7 +10,9 @@ const page = async () => {
   const user = await getCurrentUser();
 
   if (!user?.id) {
-    return <p className="text-red-500">User not found or not logged in.</p>;
+    return <div className="flex items-center justify-center min-h-screen">
+    <p className="text-red-500 text-center">User not found or not logged in.</p>
+  </div>;
   }
 
   const [userInterviewsRaw, latestInterviewsRaw] = await Promise.all([
@@ -23,7 +25,6 @@ const page = async () => {
   const latestInterviews = latestInterviewsRaw || [];
 
   const hasPastInterviews = userInterviews.length > 0;
-  const hasUpcomingInterviews = latestInterviews.length > 0;
   return (
     <>
     <section className='card-cta'>
@@ -58,20 +59,7 @@ const page = async () => {
 
     </section>
 
-    <section className='flex flex-col gap-6 mt-8'>
-      <h2>Take an Interview</h2>
-      <div className='interviews-section'>
-      {hasUpcomingInterviews ? (
-            latestInterviews?.map((interview) => (
-              <InterviewCard {...interview} key={interview.id} />
-            ))) : (
-              <p>
-              There are no new interviews available.
-              </p>
-            )}
-      </div>
-
-    </section>
+    
     
     </>
   )
